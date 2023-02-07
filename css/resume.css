@@ -1,19 +1,187 @@
 
-@media (min-width: 992px) {
 .container {
   display: grid; 
-  grid-template-columns: 25% 1fr; 
-  grid-template-rows: .50fr 0.75fr 1.75fr; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 10% 1fr 1.5fr; 
   gap: 0px 0px; 
   grid-template-areas: 
-    "nav-bar resume-head"
-    "nav-bar resume-edu"
-    "nav-bar resume-work"; 
+    "nav-bar"
+    "resume-head"
+    "resume-edu"
+    "resume-work"; 
 }
 .nav-bar { grid-area: nav-bar; }
 .resume-head { grid-area: resume-head; }
 .resume-edu { grid-area: resume-edu; }
 .resume-work { grid-area: resume-work; }
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(53, 46, 46);
+  /* height: 100vh; */
+}
+
+#profile-pic{
+  border-radius: 50%;
+  /* max-width: 100%; */
+  /* max-height: 100vh; */
+  height: 45%;
+  border: grey 10px solid;
+  box-sizing: border-box;
+}
+
+.nav-bar > h2 {
+  font-size: 25px;
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
+}
+
+.social-media {
+  padding: 20px 0 10px 30px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 10%;
+  width: 5%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: grey;
+  color: white;
+}
+
+.fa-twitter {
+  background: grey;
+  color: white;
+}
+
+.fa-linkedin {
+  background: grey;
+  color: white;
+}
+
+.fa-google {
+  background: grey;
+  color: white;
+}
+
+.fa-instagram {
+  background: grey;
+  color: white;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 23px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.nav > li {
+  margin: 0 1%;
+}
+
+li > a {
+  color: white;
+  
+}
+
+
+.resume-edu > h2, .resume-work > h2 {
+  font-size: 25px;
+  font-family: 'Aboreto', cursive;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  
+}
+
+h3 {
+  font-family: 'Shadows Into Light', cursive;
+font-weight: bolder;
+font-size: 25px;
+margin: 20px 30px;
+text-decoration: underline;
+}
+
+p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  margin: 20px;
+}
+
+ul {
+  margin: 20px 40px;
+}
+
+.date {
+  margin: 0 0 40px 30px;
+  background-color: grey;
+  width: 100px;
+  text-align: center;
+  color: white;
+ 
+}
+
+
+.resume-head > h1 {
+  font-size: 75px;
+  font-family: 'Aboreto', cursive;
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px 0;
+}
+
+.resume-edu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.resume-edu > p {
+  margin: 0 20px;
+}
+
+.resume-work > ul > li {
+  margin: 20px 0;
+}
+
+
+
+
+@media (min-width: 992px) {
+  .container {
+    display: grid; 
+    grid-template-columns: 25% 1fr; 
+    grid-template-rows: .50fr 0.75fr 1.75fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "nav-bar resume-head"
+      "nav-bar resume-edu"
+      "nav-bar resume-work"; 
+  }
+  .nav-bar { grid-area: nav-bar; }
+  .resume-head { grid-area: resume-head; }
+  .resume-edu { grid-area: resume-edu; }
+  .resume-work { grid-area: resume-work; }
 
   .nav-bar {
     display: flex;
@@ -95,68 +263,6 @@ li > a {
     
 }
 
-
-.resume-edu > h2, .resume-work > h2 {
-  font-size: 25px;
-  font-family: 'Aboreto', cursive;
-  font-weight: bolder;
-  text-decoration: underline;
-  text-align: center;
-  background-color: grey;
-  color: white;
-  
-}
-
-h3 {
-  font-family: 'Shadows Into Light', cursive;
-font-weight: bolder;
-font-size: 25px;
-margin: 20px 30px;
-text-decoration: underline;
-}
-
-p {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 18px;
-  margin: 20px;
-}
-
-ul {
-  margin: 20px 40px;
-}
-
-.date {
-  margin: 0 0 40px 30px;
-  background-color: grey;
-  width: 100px;
-  text-align: center;
-  color: white;
- 
-}
-
-
-.resume-head > h1 {
-  font-size: 75px;
-  font-family: 'Aboreto', cursive;
-  text-align: center;
-  text-decoration: underline;
-  margin: 20px 0;
-}
-
-.resume-edu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-}
-
-.resume-edu > p {
-  margin: 0 20px;
-}
-
-.resume-work > ul > li {
-  margin: 20px 0;
-}
 
 
 
